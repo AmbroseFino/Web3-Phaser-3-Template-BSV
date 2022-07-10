@@ -1,0 +1,36 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "Run on BSV, A web3 Platformer Built on BitCoin",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "npx webpack --mode production",
+    "start": "npm run build && npx webpack-dev-server --port=8000 --mode development",
+    "lint": "npx eslint src/ --fix",
+    "bundle": "./bundle.sh"
+  },
+  "author": "Ambrose Fino",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "dotenv": "^8.1.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "raw-loader": "^3.1.0",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/runtime": "^7.17.9",
+    "@handcash/handcash-connect": "^0.4.1",
+    "api": "^4.4.0",
+    "phaser": "^3.55.2",
+    "socket.io-client": "^2.2.0",
+    "uuid": "^3.3.2"
+  }
+}
