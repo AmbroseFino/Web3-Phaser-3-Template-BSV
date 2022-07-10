@@ -4,28 +4,23 @@ const controller = require('../controllers/features.controller')
 const auth = require("../middleware/auth.middleware");
 
 // send a test transaction on the user's behalf
-router.post('/auth/5-send', auth, controller.sendTransaction5);
+router.post('/auth/test-send', auth, controller.sendTransaction);
 
-// send a test transaction on the user's behalf
-router.post('/auth/25-send', auth, controller.sendTransaction25);
+// send a test transaction on the bots's behalf
+router.post('/auth/test-sendBot', auth, controller.sendBot);
 
-// send a test transaction on the user's behalf
-router.post('/auth/50-send', auth, controller.sendTransaction50);
+// send a multisend test transaction on the user's behalf
+router.post('/auth/test-multi-send', auth, controller.sendMultisendTransaction);
 
-// send a test transaction on the user's behalf
-router.post('/auth/100-send', auth, controller.sendTransaction100);
+// send a multisend test transaction on the user's behalf
+router.post('/auth/test-data', auth, controller.sendDataTransaction);
 
-// send a test transaction on the ROB's behalf
-router.post('/auth/win-5', auth, controller.sendWinner5);
+// fetch a transaction
+router.get('/auth/get-transaction', auth, controller.getTransaction);
 
-// send a test transaction on the ROB's behalf
-router.post('/auth/win-25', auth, controller.sendWinner25);
+// encrypt a post
+router.post('/auth/encrypt', auth, controller.postEncrypt);
 
-// send a test transaction on the ROB's behalf
-router.post('/auth/win-50', auth, controller.sendWinner50);
-
-// send a test transaction on the ROB's behalf
-router.post('/auth/win-100', auth, controller.sendWinner100);
 
 
 module.exports = router;

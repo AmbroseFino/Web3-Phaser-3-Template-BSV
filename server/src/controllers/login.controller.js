@@ -53,3 +53,23 @@ module.exports.getAuthenticate = async (req, res, next) => {
   
 };
 
+// returns user's information
+module.exports.getProfile = async (req, res) => {
+
+  // fetch the authenticated user and their profile
+  const user = await User.findById(req.user._id);
+  const account = await handCashConnect.getAccountFromAuthToken(user.connectAuthToken);
+  const { publicProfile, privateProfile } = await account.profile.getCurrentProfile();
+  const spendableBalance = await account.wallet.getSpendableBalance()
+  const permissions = await account.profile.getPermissions()
+  // print it out
+
+  // display public profile
+  res.render('profile', {
+    publicProfile: publicProfile,
+    privateProfile: privateProfile,
+    spendableBalance: spendableBalance,
+    permissions: permissions,
+    path: '/profile'
+  }) 
+}
