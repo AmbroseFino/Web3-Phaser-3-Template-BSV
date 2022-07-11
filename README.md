@@ -1,7 +1,7 @@
 # Phaser 3 HandCash Template
 
 ## Introduction
-I have created a boiler-plate template for implementing a Phaser 3 game on Heroku using Micro-Payments on Bitcoin SV. We use Express, Webpack, MongoDB for authentication and transpile using Babel. The server side code can easily be modified to work with other backend frameworks. Using A single Webpack bundle is recommended for multi-scene Phaser projects but this can impact performance in mobile environments. For more info visit: [https://webpack.js.org/guides/code-splitting/](https://webpack.js.org/guides/code-splitting/)
+I have created a boiler-plate template for implementing a Phaser 3 game on Heroku using Micro-Payments (as low as $0.00001) on Bitcoin SV mainnet. We use Express, Webpack, MongoDB for authentication and transpile using Babel. The server side code can easily be modified to work with other backend frameworks. Using A single Webpack bundle is recommended for multi-scene Phaser projects but this can impact performance in mobile environments. For more info visit: [https://webpack.js.org/guides/code-splitting/](https://webpack.js.org/guides/code-splitting/)
 
 ## Available Commands (Client)
 
